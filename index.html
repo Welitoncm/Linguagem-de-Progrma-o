@@ -1,96 +1,65 @@
 <!DOCTYPE html>
-<html>
-<body><script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=-jdtdob4TNxHtMWia_Dmr5aVFsIKm75fzDBggEJ1GqU5lQ43J9-yavEwM9pWYJIVjTHOzaxKJN7hb-QpPgylJw" charset="UTF-8"></script>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="roboto-thin"><b>Site Aula Linguagem de Programação</b></h1>
+    </header>
 
-<h2>Formulário de Inscrição</h2>
-
-<form action="https://www.w3schools.com/action_page.php" method="post">
-    <label for="data">Data:</label><br>
-    <input type="date" id="data" name="data"><br>
-    <h3>Dados de Acesso</h3>
-    <label for="usuario">Usuário:</label><br>
-    <input type="text" id="usuario" name="usuario"><br>
-    <label for="senha">Senha:</label><br>
-    <input type="password" id="senha" name="senha"><br>
-    <h3>Dados Pessoais</h3>
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" name="nome"><br>
-    <label for="endereco">Endereço:</label><br>
-    <input type="text" id="endereco" name="endereco"><br>
-    <label for="numero">Número:</label><br>
-    <input type="text" id="numero" name="numero"><br>
-    <label for="complemento">Complemento:</label><br>
-    <input type="text" id="complemento" name="complemento"><br>
-    <label for="cidade">Cidade:</label><br>
-  <input list="cidades" id="cidade" name="cidade">
-  <datalist id="cidades">
-      
-    </datalist><br>
-    <label for="estado">Estado:</label><br>
-    <select id="estado" name="estado">
- 
-    </select><br>
-    <label for="cep">CEP:</label><br>
-    <input type="text" id="cep" name="cep"><br>
-    <h3>Gênero:</h3>
-    <input type="radio" id="masculino" name="genero" value="masculino">
-    <label for="masculino">Masculino</label><br>
-    <input type="radio" id="feminino" name="genero" value="feminino">
-    <label for="feminino">Feminino</label><br>
-    <input type="radio" id="nao_falar" name="genero" value="nao_falar">
-    <label for="nao_falar">Prefiro não falar</label><br>
-    <h3>Curso:</h3>
-    <input type="checkbox" id="ads" name="curso" value="ads">
-    <label for="ads">ADS</label><br>
-    <input type="checkbox" id="jogos" name="curso" value="jogos">
-    <label for="jogos">Jogos</label><br>
-    <input type="checkbox" id="gestao_ti" name="curso" value="gestao_ti">
-    <label for="gestao_ti">Gestão de TI</label><br>
-    <input type="checkbox" id="bd" name="curso" value="bd">
-    <label for="bd">Banco de Dados</label><br>
-    <h3>Modelo:</h3>
-    <input type="radio" id="presencial" name="modelo" value="presencial">
-    <label for="presencial">Presencial</label><br>
-    <input type="radio" id="ead" name="modelo" value="ead">
-    <label for="ead">EAD</label><br>
-    <input type="radio" id="semi_presencial" name="modelo" value="semi_presencial">
-    <label for="semi_presencial">Semi presencial</label><br>
-    <input type="submit" value="Enviar">
-  </form>
-
-  <script>
-document.addEventListener('DOMContentLoaded', (event) => {
-  const selectEstado = document.getElementById('estado');
-  const datalistCidade = document.getElementById('cidades');
-
-  
-  fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados')
-    .then(response => response.json())
-    .then(data => {
-      data.forEach(estado => {
-        const optionEstado = document.createElement('option');
-        optionEstado.value = estado.id;
-        optionEstado.text = estado.nome;
-        selectEstado.appendChild(optionEstado);
-      });
-    });
-
-  
-  selectEstado.addEventListener('change', (event) => {
-    const estadoId = event.target.value;
-
-  
-    datalistCidade.innerHTML = '';
-
-    fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoId}/municipios`)
-      .then(response => response.json())
-      .then(data => {
-        data.forEach(municipio => {
-          const optionCidade = document.createElement('option');
-          optionCidade.value = municipio.nome;
-          datalistCidade.appendChild(optionCidade);
-        });
-      });
-  });
-});
-    </script>
+    <nav>
+        <ul>
+            <li><a href="#">HOME</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="session-box">
+            <div class="box-with-image-and-text">
+                <div class="image-box">
+                    <img src="download (4).jpeg" alt="cavalo1">
+                </div>
+                <div class="text-box">
+                    <p>Desde os primórdios da história humana, os cavalos têm desempenhado papéis significativos nas culturas, nas sociedades e na vida cotidiana de pessoas em todo o mundo. Esses majestosos animais, com sua graça, força e beleza, cativaram a imaginação das pessoas por séculos. Vamos explorar a profundidade dessa conexão ancestral entre humanos e cavalos.
+                        <br><br>
+                        História e Evolução:
+                        Os cavalos têm uma história longa e fascinante que remonta a milhares de anos. Originários das estepes da Ásia Central, eles foram domesticados por volta de 4000 a.C., tornando-se essenciais para a mobilidade e o desenvolvimento das civilizações antigas. Desde então, têm sido companheiros confiáveis em batalhas, transporte, agricultura, esportes e lazer.
+                        <br><br>
+                        Raças e Variedades:
+                        Uma das maravilhas dos cavalos é a diversidade de raças e variedades que existem em todo o mundo. Desde os ágeis árabes até os robustos Clydesdales, cada raça tem suas próprias características distintas, adaptadas às necessidades específicas de seu ambiente e propósito.
+                        <br><br>
+                        Relação com os Humanos:
+                        A relação entre humanos e cavalos vai além da utilidade prática. Muitas culturas desenvolveram vínculos espirituais e simbólicos com esses animais. Na mitologia e nas lendas, os cavalos frequentemente representam poder, liberdade, nobreza e até mesmo a ligação entre o mundo terreno e o divino.
+                    </p>
+                </div>
+            </div>
+            <div class="additional-text-box">
+                <p>Esporte e Entretenimento:
+                    Nos tempos modernos, os cavalos continuam a desempenhar um papel proeminente no mundo do esporte e do entretenimento. Desde corridas de cavalos até competições de salto e adestramento, esses animais atléticos demonstram habilidades impressionantes que cativam multidões em todo o mundo.</p>
+            </div>
+            <div class="box-with-image-and-text">
+                <div class="image-box">
+                    <img src="download (3).jpeg" alt="cavalo2">
+                </div>
+                <div class="text-box">
+                    <p>Cuidados e Bem-Estar:
+                        Cuidar de um cavalo é uma responsabilidade que requer dedicação e conhecimento. Da alimentação adequada ao exercício regular, passando pela higiene e atenção veterinária, garantir o bem-estar de um cavalo é fundamental para sua saúde física e mental.
+                        <br><br>
+                        Inspiração Cultural:
+                        Os cavalos também inspiraram inúmeras obras de arte, literatura, música e cinema. De pinturas clássicas a épicos cinematográficos, esses magníficos animais continuam a despertar a imaginação e a criatividade dos artistas em todo o mundo.
+                        <br><br>
+                        A Intuição e a Companhia dos Cavalos:
+                        Além de sua imponência física e habilidades atléticas, os cavalos também possuem uma qualidade única de intuição e empatia. Eles têm uma capacidade notável de perceber as emoções humanas e responder de acordo, muitas vezes servindo como confidentes silenciosos em momentos de alegria, tristeza ou simples contemplação. Essa conexão emocional entre humanos e cavalos transcende as barreiras da linguagem e da cultura, oferecendo um conforto e uma companhia incomparáveis aos amantes desses magníficos animais.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>2024 © Meu site</p>
+    </footer>
+</body>
+</html>
